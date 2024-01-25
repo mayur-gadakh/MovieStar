@@ -33,6 +33,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/:mediaType/:id" element={<Details />}></Route>
+        <Route path="/search/:query" element={<SearchResult />}></Route>
+        <Route path="*" element={<pageNotFound />} />
       </Routes>
     </BrowserRouter>
   );
