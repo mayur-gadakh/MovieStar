@@ -42,6 +42,7 @@ function App() {
         <Route path="/search/:query" element={<SearchResult />}></Route>
         <Route path="*" element={<pageNotFound />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
