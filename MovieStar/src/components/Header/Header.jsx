@@ -20,11 +20,8 @@ const Header = () => {
     window.scrollTo(0, 0);
   }, [location]);
   const controlNavbar = () => {
-    console.log(window.scrollY);
-
     if (window.scrollY > 200) {
       if (window.scrollY > lastScrollY && !mobileMenu) {
-        console.log(lastScrollY);
         setShow("hide");
       } else {
         setShow("show");
@@ -74,7 +71,13 @@ const Header = () => {
     <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
       <ContentWrapper>
         <div className="logo">
-          <img src={logo} alt=""></img>
+          <img
+            src={logo}
+            alt=""
+            onClick={() => {
+              navigate("/");
+            }}
+          ></img>
         </div>
         <ul className="menuItems">
           <li className="menuItem" onClick={() => navigationHandler("movies")}>

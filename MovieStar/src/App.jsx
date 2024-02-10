@@ -20,6 +20,7 @@ function App() {
 
   useEffect(() => {
     fetchApiConfig();
+    genersCall();
   }, []);
 
   const fetchApiConfig = () => {
@@ -31,6 +32,23 @@ function App() {
       };
       dispatch(getApiConfiguration(url));
     });
+  };
+
+  const genersCall = async () => {
+    const promises = [];
+    const endPoints = ["tv", "movie"];
+    const allGeners = {};
+
+    endPoints.forEach((url) => {
+      promises.push(fetchingDataFromApi(`/genre/${url}/list`));
+    });
+
+    const data = await Promise.all(promises);
+    data.map(({ genres }) => {
+      return genres.map((item) => (allGeners[item.id] = item));
+    });
+
+    dispatch(getGeners(allGeners));
   };
 
   return (
