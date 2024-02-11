@@ -35,7 +35,7 @@ const Explore = () => {
   const { mediaType } = useParams();
 
   const { data: genresData } = useFetch(`/genre/${mediaType}/list`);
-
+  console.log(mediaType);
   const fetchInitialData = () => {
     setLoading(true);
     fetchingDataFromApi(`/discover/${mediaType}`, filters).then((res) => {

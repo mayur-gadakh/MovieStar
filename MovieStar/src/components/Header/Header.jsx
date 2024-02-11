@@ -60,8 +60,8 @@ const Header = () => {
   };
 
   const navigationHandler = (type) => {
-    if (type === "movies") {
-      navigate("/explore/movies");
+    if (type === "movie") {
+      navigate("/explore/movie");
     } else {
       navigate("/explore/tv");
     }
@@ -80,7 +80,7 @@ const Header = () => {
           ></img>
         </div>
         <ul className="menuItems">
-          <li className="menuItem" onClick={() => navigationHandler("movies")}>
+          <li className="menuItem" onClick={() => navigationHandler("movie")}>
             Movies
           </li>
           <li className="menuItem" onClick={() => navigationHandler("tv")}>
