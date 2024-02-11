@@ -8,7 +8,7 @@ import "./App.css";
 import heroBanner from "./pages/home/heroBanner/heroBanner";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import pageNotFound from "./pages/404/404";
+import PageNotFound from "./pages/404/PageNotFound";
 import Details from "./pages/details/Details";
 import Explore from "./pages/explore/Explore";
 import Home from "./pages/home/Home";
@@ -59,7 +59,7 @@ function App() {
         <Route path="/:mediaType/:id" element={<Details />}></Route>
         <Route path="/search/:query" element={<SearchResult />}></Route>
         <Route path="/explore/:mediaType" element={<Explore />}></Route>
-        <Route path="*" element={<pageNotFound />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>
