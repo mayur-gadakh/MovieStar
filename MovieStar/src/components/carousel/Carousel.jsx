@@ -30,7 +30,6 @@ const Carousel = ({ data, loading, endpoint, title }) => {
       behavior: "smooth",
     });
   };
-
   const skItem = () => {
     return (
       <div className="skeletonItem">

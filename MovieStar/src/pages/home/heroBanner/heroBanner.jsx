@@ -15,7 +15,6 @@ const HeroBanner = () => {
   const { data, loading } = useFetch("/movie/upcoming");
 
   useEffect(() => {
-    console.log(url.backdrop);
     const bg =
       url.backdrop +
       data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path;
@@ -50,7 +49,13 @@ const HeroBanner = () => {
               onKeyUp={searchQueryHandler}
               onChange={(event) => setQuery(event.target.value)}
             />
-            <button>Search</button>
+            <button
+              onClick={() => {
+                navigate(`/search/${query}`);
+              }}
+            >
+              Search
+            </button>
           </div>
         </div>
       </ContentWrapper>

@@ -22,12 +22,15 @@ const Footer = () => {
           <li className="menuItem">FAQ</li>
         </ul>
         <div className="infoText">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+          Welcome to Movie Star, your go-to movie handbook! Immerse yourself in
+          a cinematic universe where seamless design meets unparalleled
+          functionality. Movie Star guarantees a smooth exploration through an
+          extensive movie collection. Elevate your experience with dynamic data
+          retrieval and a personalized journey. With responsive design across
+          devices, Movie Star adapts to your viewing preferences. Lazy loaders
+          optimize load times, delivering an uninterrupted movie discovery.
+          Explore the cinematic realm and join us on this exciting movie
+          adventure!
         </div>
         <div className="socialIcons">
           <span className="icon">
